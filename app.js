@@ -4,6 +4,9 @@ let numeroSecreto = gerarNumeroAleatorio();
 let quantidadeDeElementosNaLista = listaNumerosSort.length;
 let tentativas = 0;
 
+function gerarNumeroAleatorio() {
+    return Math.floor(Math.random() * numeroLimite) + 1;
+}
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -26,7 +29,6 @@ function mensagemInicial() {
 }
 
 mensagemInicial();
-
 
 
 function verificarChute() {
@@ -74,5 +76,5 @@ function reiniciarJogo() {
     tentativas = 0;
     mensagemInicial();
     document.getElementById("reiniciar").setAttribute("disabled", true);
-
 }
+
